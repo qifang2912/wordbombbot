@@ -1,6 +1,12 @@
+from pathlib import Path
+
+
 def load_words():
-    with open('words.txt', 'r') as file:
+    file_path = Path(__file__).parent / 'words.txt'
+
+    with open(file_path, 'r') as file:
         words = file.read().splitlines()
+
     return words
 
 
